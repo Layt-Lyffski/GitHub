@@ -77,13 +77,13 @@ def rent(K_o, r, q, n, o1=True, o2=False, o3=True):
 
 
 
-print(zins.__doc__)
-x = zins("8000 = 6700 * p^12") # or "zins(8000;6700;p;12)" work as well
+# print(zins.__doc__)
+x = zins("K_n;50000;2.4;5") # or "zins(8000;6700;p;12)" work as well
 print(x)
 
-print(rent.__doc__)
-x = rent(0,50,2.25,3)
-print(x)
+# print(rent.__doc__)
+# x = rent(0,50,2.25,3)
+# print(x)
 
 
 
