@@ -77,6 +77,9 @@ def rent(K_o, r, q, n, o1=True, o2=False, o3=True):
 
 
 def effi(ks, p, t, disagio):
+    '''
+    Input: ks = capital_sum; p = percentage (whole number); t = time (in days); disagio = the disagio rate (whole number)
+    '''
     disagio = (disagio/100)
     z_n = (ks * p * t) / (100 * 360)
     kk = z_n + (ks * disagio)
