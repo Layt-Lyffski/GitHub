@@ -3,7 +3,7 @@ import re
 
 def zins(st):
     '''
-    Input: zins(K_n = K_o * p^n) == zins(K_n;K_o;p;n)
+    Input: zins(K_n;K_o;p;n)
     Note: if you use the 1st instance make sure to have space between operators
     '''
     ls = re.split(";| = | \* |\^",st)
@@ -76,33 +76,24 @@ def rent(K_o, r, q, n, o1=True, o2=False, o3=True):
         return round(K_n,2)
 
 
+def effi(ks, p, t, disagio):
+    disagio = (disagio/100)
+    z_n = (ks * p * t) / (100 * 360)
+    kk = z_n + (ks * disagio)
+    az = ks - (ks * disagio)
+    p_eff = (kk * 360 * 100) / (az * t)
+    return round(p_eff,2)
+
+
+
+# print(effi.___doc__)
+x = effi(60000, 6, 1440, 4)
+print(x)
 
 # print(zins.__doc__)
-x = zins("K_n;50000;2.4;5") # or "zins(8000;6700;p;12)" work as well
+x = zins("K_n;50000;2.4;5") 
 print(x)
 
 # print(rent.__doc__)
-# x = rent(0,50,2.25,3)
-# print(x)
-
-
-
-
-# def zin_find_K(K_o, q, n):
-#     K_n = K_o * (1+q/100)**n
-#     return round(K_n,2)
-
-# def zin_find_n(K_o, q, K_n):
-#     K = K_n / K_o
-#     q = 1+q/100
-#     n = math.log(K,10) / math.log(q,10)
-#     return round(n,2)
-
-# def zin_find_init_K(K_n, q, n):
-#     K_o = K_n / (1+q/100)**n
-#     return round(K_o,2)
-
-# def zin_find_rate(K_o, n, K_n):
-#     q = (K_n / K_o)**(1/n)
-#     return round(q,2)
-
+x = rent(0,50,2.25,3)
+print(x)
