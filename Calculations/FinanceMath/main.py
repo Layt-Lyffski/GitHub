@@ -1,12 +1,12 @@
 import math
 import re
 
-def zins(st):
+def zins(ls):
     '''
     Input: zins(K_n;K_o;p;n)
     Note: if you use the 1st instance make sure to have space between operators
     '''
-    ls = re.split(";| = | \* |\^",st)
+    ls = ls.split(";")
     if ls[0] == "K_n":
         #parsing input
         #fK_n = float(ls[0])= missing 
