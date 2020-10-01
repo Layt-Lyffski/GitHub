@@ -4,11 +4,10 @@ class Annuitätentilgung:
         self.p = p 
         self.n = n 
         self.q = 1+p/100
-        self.a = (self.k_o * self.q**self.n * (self.q-1) / ( self.q ** self.n - 1))
-        self.t_1 = (self.k_o * (self.q-1)) / (self.q**self.n -1)
+        self.a = round(self.k_o * self.q**self.n * (self.q-1) / ( self.q ** self.n - 1), 2)
+        self.t_1 = round((self.k_o * (self.q-1)) / (self.q**self.n -1), 2)
         
     def zinsd(self):
-        self.q = 1 + self.p/100
         ls = []
         for v in range (1,self.n+1,1):
             z_v = (self.k_o * (self.q-1) * (self.q**self.n - self.q**(v-1))) / (self.q**self.n -1)
@@ -16,35 +15,30 @@ class Annuitätentilgung:
         return ls
 
     def annui(self):
-        ls_t = []
-        for v in range (1,self.n,1):
+        ls = []
+        for v in range (1,self.n+1,1):
             self.t_v = self.t_1 * self.q**(v-1)
-            ls_t.append(self.t_v)
-        
-        return ls_t
+            ls.append(self.t_v)
+        return ls
         
     def restz(self):
-        ls_r = []
+        ls = []
         for v in range (1,self.n,1):
             self.k_v = self.k_o * self.q**v - (self.a * (self.q**v -1)) / (self.q-1)
-            ls_r.append(self.k_v)
-        return ls_r
+            ls.append(self.k_v)
+        return ls
 
     def show_matrix(self):
-        x1 = ann.restz()
+        x1 = ann.annui()
         x2 = ann.zinsd()
-        x3 = ann.annui()
-        
-    
+        x3 = ann.restz()
+        print(x1)
+        print(x2)
+        print(x3)
+        print(self.a)
 
-ann = Annuitätentilgung(40000, 10, 4)
+ann = Annuitätentilgung(75000, 4.5, 5)
 ann.show_matrix()
 
 
-
-'''
-print(zinsd(40000, 10, 4))
-print(annui(40000, 10, 4))
-print(restz(40000, 10, 4))
-'''
 
