@@ -60,5 +60,6 @@ iA = arrangeArray(np.linalg.inv(A), 3, 3, 2)
 print(iA)
 
 
+
         
 
