@@ -1,4 +1,4 @@
-def ggt_ext(a, b, x, y):
+ddef ggt_ext(a, b, x, y):
    # default
    if a == 0 :
       x = 0
