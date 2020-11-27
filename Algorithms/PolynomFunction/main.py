@@ -163,29 +163,12 @@ class LinearFunction:
     pass
 
 
-#------------------------------#
-# Polynom of 3rd Degree        
-#------------------------------#
-
-class Poly3rd:
-  def __init__(self):
-    self.a = float(input(""))
-    self.b = float(input(""))
-    self.c = float(input(""))
-    self.d = float(input(""))
-  def menu(self):
-    print('Polynom not available temporary')
-
-
-
-
 #######################################################################
 # Input #
 print('Choose you Function')
 print('===========================================')
 print('1. Linear Function')
 print('2. Quadratic Function')
-print('3. Polynome of 3rd Degree')
 print('-------------------------------------------')
 select = int(input("Select your Polynom Degree: "))
 clear()
@@ -202,15 +185,8 @@ if select == 2:
   
   poly2sd.menu()
 
-if select == 3:
-  print("\nInitialize your Polynom of 3rd Degree: ")
-  print("==========================================")
-  poly3rd= Poly3rd()
-  poly3rd.menu()
 
 
 
 
-# Copyrighted 2020
-# Layt-Lyffski
  
