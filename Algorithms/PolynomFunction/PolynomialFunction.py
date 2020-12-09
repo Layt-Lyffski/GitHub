@@ -1,7 +1,6 @@
 import math
 import sys
 import os
-clear = lambda: os.system('cls')
 
 #------------------------------#
 # Quadratic Function
@@ -24,7 +23,7 @@ class QuadraticFunction:
     print("S("+str(self.xs)+"|"+str(self.ys)+")")
     print("y = " + str(self.a) + "(x -(" + str(self.xs) + "))^2 + (" + str(self.ys) + ")")
     print(input(str("Press entry to continue")))
-    clear()
+    
     pass
 
 
@@ -36,7 +35,6 @@ class QuadraticFunction:
     print("y rounded: " + str(y))
     print("the y coordinate equal: "+str(y))
     print(input(str("Press entry to continue")))
-    clear()
     pass
 
 
@@ -52,7 +50,6 @@ class QuadraticFunction:
       print("False - > The point is not on the Parabola")
       print("Because "+str(y_input)+" != "+str(x_output))
     print(input(str("Press entry to continue")))
-    clear()
     pass
 
 
@@ -71,7 +68,6 @@ class QuadraticFunction:
       print ("Solution do not exist")
       print ("L = {"+"}")
     print(input(str("Press entry to continue")))
-    clear()
     pass
     
 
@@ -83,7 +79,6 @@ class QuadraticFunction:
     else: print("which opens downwards")
     print("and the Parabola is moved "+str(self.xs)+" units along the x-axis\nand "+str(self.ys)+" units along the y-axis")
     print(input(str("Press entry to continue")))
-    clear()
     pass
     
 
@@ -147,12 +142,11 @@ class LinearFunction:
     print("rounded slope-intercept form: y = " + str(rm) + "x + (" + str(ry) + ")")
     print("exact slope-intercept from: y= " + str(self.m) + "x + (" + str(self.yb) + ")")
     print(input(str("Press entry to continue")))
-    clear()
     pass
 
 
   def menu(self):
-    print('Linear Menu - Curret Equation: ')
+    print('Linear Menu - Curret Equation: '+str(self.a)+"x + "+str(self.b)+"y = "+str(self.c)+"")
     print('1. Slope Form')
     choice = str(input("Select: "))
     if choice == "1":
@@ -171,7 +165,7 @@ print('1. Linear Function')
 print('2. Quadratic Function')
 print('-------------------------------------------')
 select = int(input("Select your Polynom Degree: "))
-clear()
+
 if select == 1: 
   print("\nInitialize your Linear in General Form: ")
   print("==========================================")
