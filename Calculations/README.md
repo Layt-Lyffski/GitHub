@@ -1,1 +1,0 @@
-Calculations for most commonly used Schema in our daily life, which are allowing us to deal more efficient with our Problems, if those occurs.
