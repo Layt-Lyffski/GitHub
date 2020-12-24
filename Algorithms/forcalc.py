@@ -51,7 +51,7 @@ class Forecalc:
         netto_vkp = ziel_vkp + kr
         brutto_vkp = round(netto_vkp + (netto_vkp * 0.19), 2)
 
-        print("Listeneinkaufspreis netto: " + str(self.x1)+ "\nLieffererrabtt: -" + str(lr) + "\nZieleinkaufspreis: " + str(ziel_ekp) + "\nLieferskonto: -" + str(lsk) + "\nBarverkaufspreis: " + str(bar_ek) + "\nBezugskosten: +" + str(self.bzk) +"\nBezugspreis: " + str(bzg_preis) + "\nHandlungskosten: +" + str(hkz) + "\nSelbstkosten: " + str(slb_cost)+ "\nGewinn: +" + str(win) + "\nBarverkaufspreis: " + str(bar_vkp) + "\nKundenskonto: +" + str(ks) + "\nZielverkaufspreis: " +str(ziel_vkp)+ "\nKundenrabatt: +"+str(kr)+"\nNettoverkaufspreis: "+str(netto_vkp)+"\nBruttoverkaufspreis: "+str(brutto_vkp)+"")
+        print("Listeneinkaufspreis netto: ", self.x1, "\nLieffererrabtt: -", lr, "\nZieleinkaufspreis: ", ziel_ekp, "\nLieferskonto: -", lsk, "\nBarverkaufspreis: ", bar_ek, "\nBezugskosten: +", self.bzk, "\nBezugspreis: ", bzg_preis, "\nHandlungskosten: +",hkz,  "\nSelbstkosten: ", slb_cost, "\nGewinn: +", win, "\nBarverkaufspreis: " ,bar_vkp,  "\nKundenskonto: +", ks, "\nZielverkaufspreis: " ,ziel_vkp,  "\nKundenrabatt: +", kr, "\nNettoverkaufspreis: ", netto_vkp, "\nBruttoverkaufspreis: ", brutto_vkp, "")
 
         #print("Lek: {x1}\nMegfdk: {x2}".format(x1=self.x1, x2=lr))
 
