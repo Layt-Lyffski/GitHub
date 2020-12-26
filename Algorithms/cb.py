@@ -41,3 +41,9 @@ qu - 32
 print(qu)
 x = qu._get()
 print(x)
+
+
+import colorama
+from colorama import Fore, Back, Style
+
+print(Fore.RED + "text estd")
