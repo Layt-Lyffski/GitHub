@@ -28,7 +28,7 @@ df.to_csv("modifed.txt", index=False, sep="\t") #sep → seperated by tab<
 
 df.loc[(df["type1"] == "Grass") & (df.loc["type2"]=="poison")] #can have multiply condition
 
-new_df = df.reset.reset_index(drop=True, inplace==Ture) #inplace replace the index || drop=True drop the old index
+#new_df = df.reset.reset_index(drop == True, inplace == True) #inplace replace the index || drop=True drop the old index
 
 df.loc[~df["name"].str.contains("Mega")] #select||delete(~) all var that contains str "Mega" in "name" col 
 import re
@@ -42,7 +42,7 @@ df.loc[df["Total"] > 500, ["Generation","Legendary"]] = ["insteadOfGenerationVal
 
 df["count"] = 1 #ensure that no erorrs will blowup
 df.groupby(["Type1"]).count().sort_values("Defence", ascending=False) #group type1 by count then sort by highest "Defence"
-dg.groupby(["Type1", "Type2"]).count()["count"] #count all rightly, but prove this vers one more time before you use it ok?
+df.groupby(["Type1", "Type2"]).count()["count"] #count all rightly, but prove this vers one more time before you use it ok?
 
 pd.read_csv("modifed.csv", chunksize=5) #not to load whole data for example do not load 40gb for once
 
