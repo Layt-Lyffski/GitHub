@@ -44,7 +44,7 @@ df["count"] = 1 #ensure that no erorrs will blowup
 df.groupby(["Type1"]).count().sort_values("Defence", ascending=False) #group type1 by count then sort by highest "Defence"
 dg.groupby(["Type1", "Type2"]).count()["count"] #count all rightly, but prove this vers one more time before you use it ok?
 
-pd.read_csv("modifed.csv", chunksize=5): #to not load whole data for example do not load 40gb for once
+pd.read_csv("modifed.csv", chunksize=5) #not to load whole data for example do not load 40gb for once
 
  
 
