@@ -27,7 +27,7 @@ class Backcalc:
         bar_ekp = bzk_cost - self.bkz
         lsk = abs(round(bar_ekp / (1-(100/self.lsk)),2))
         ziel_ekp = bar_ekp + lsk
-        lr = abs(round((ziel_ekp / (1-(100/self.lr))),2))
+        lr = abs(round(ziel_ekp / (1-(100/self.lr)),2))
         netto_ekp = ziel_ekp + lr
         print(netto_ekp)
 
