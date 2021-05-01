@@ -18,7 +18,7 @@ class Support_Vector_Machine:
                     [-1,1],
                     [-1,-1],
                     [1,-1],]
-      
+                    
       all_data = []
       for yi in self.data: # cast all data into "all_data"
          for featureset in self.data[yi]:
