@@ -1,3 +1,5 @@
+import numpy as np
+
 class Student:
     def __init__(self, name, age, grade):
         self.name = name
@@ -54,18 +56,54 @@ mp = filter(lambda i: (i*3) % 2 == 0, x)
 print(list(mp))
 
 
-import os
-
-print(os.getcwd())
 
 
+import numpy as np
 
-#input output files
-import csv
+arr = np.array([1, 2, 3, 4, 5])
+
+print(arr)
+
+print(type(arr))
+
+
+i, j = np.arange(2), np.arange(3)
+
+print(i, j)
+
+I, J = np.meshgrid(i, j, sparse=True, indexing="ij")
+print(I.shape, J.shape)
+
+print(I, J)
+
+#I, J = np.ogrid[:2, :3]
+print(I, J)
+#I, J = np.indices((2,3), sparse=True)
+
+print(I, J)
+K = J - I
+print(K)
+
+
+x = np.arange(20).reshape(5, 4)
+
+row, col = np.indices((2, 3))
+
+print(x)
+print(x[row, col])
+print(x[2,1])
 
 
 
 # input ouput jpg (differten than .txt)
+"""
+import os
+
+print(os.getcwd())
+
+#input output files
+import csv
+
 with open("pic.jpg", "rb") as rf: #rb = read binary
     with open("jpn_copy.jpg", "wb") as wf:
         chunk_size = 4096 #how much pix will it it forwarding the pic
@@ -76,15 +114,14 @@ with open("pic.jpg", "rb") as rf: #rb = read binary
 
 
 
-            """
+        
 What is a Package?
 
 A package contains all the files you need for a module.
 
 Modules are Python code libraries you can include in your project.
 
-            """
-
+            
 try:
   f = open("demofile.txt")
   f.write("Lorum Ipsum")
@@ -92,3 +129,4 @@ except:
   print("Something went wrong when writing to the file")
 finally:
   f.close() 
+"""

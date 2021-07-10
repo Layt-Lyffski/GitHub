@@ -6,7 +6,7 @@
 # which speeds the search. It also works best when 
 # there are no duplicates
 
-def binarySearchForValue(value)
+def binarySearchForValue(value):
     
     lowIndex = 0;
     highIndex = arraySize - 1;
